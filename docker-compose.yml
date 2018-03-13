@@ -39,18 +39,7 @@ services:
     labels:
       - 'traefik.backend=nginx'
       - 'traefik.port=80'
-      - 'traefik.frontend.rule=Host:drupal.localhost'
-
-  front:
-    build:
-      context: dockers/front
-      dockerfile: Dockerfile
-    volumes:
-      - ./_html/:/var/www/html
-    labels:
-      - 'traefik.backend=front'
-      - 'traefik.port=80'
-      - 'traefik.frontend.rule=Host:front.drupal.localhost'
+      - 'traefik.frontend.rule=Host:drupalproj.localhost'
 
   traefik:
     image: traefik
@@ -72,7 +61,7 @@ services:
     labels:
       - 'traefik.backend=pma'
       - 'traefik.port=80'
-      - 'traefik.frontend.rule=Host:pma.drupal.localhost'
+      - 'traefik.frontend.rule=Host:pma.drupalproj.localhost'
 
   portainer:
     image: portainer/portainer
@@ -82,7 +71,12 @@ services:
     labels:
       - 'traefik.backend=portainer'
       - 'traefik.port=9000'
-      - 'traefik.frontend.rule=Host:portainer.drupal.docker.localhost'
+      - 'traefik.frontend.rule=Host:portainer.drupalproj.localhost'
 
-volumes:
-  docroot:
+
+  mailhog:
+    image: mailhog/mailhog
+    labels:
+      - 'traefik.backend=mailhog'
+      - 'traefik.port=8025'
+      - 'traefik.frontend.rule=Host:mailhog.drupalproj.localhost'
