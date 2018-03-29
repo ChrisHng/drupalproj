@@ -1,0 +1,4 @@
+name: Monolog implementation
+type: module
+description: 'This module implements logging with monolog'
+core: 8.x

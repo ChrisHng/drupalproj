@@ -1,0 +1,3 @@
+services:
+  logger_imp.handler.browser_console:
+    class: Monolog\Handler\BrowserConsoleHandler

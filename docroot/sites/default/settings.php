@@ -249,7 +249,11 @@ $databases = array();
  *   );
  * @endcode
  */
-$config_directories = array();
+
+
+$config_directories = array(
+  CONFIG_SYNC_DIRECTORY => 'config/sync'
+);
 
 /**
  * Settings:
@@ -794,4 +798,4 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
 );
 $settings['install_profile'] = 'standard';
-$config_directories['sync'] = 'sites/default/files/config_dbThODWx-pdvn7lfxwQc4qk4k093Lm62JpeVCAH-16TUv4DRprg73cGzX1RvdI97Z-azThKEtw/sync';
+$settings['container_yamls'][] = 'sites/default/monolog.services.yml';

@@ -1,0 +1,6 @@
+aloha.render:
+    path: '/aloha'
+    defaults:
+        _controller: 'Drupal\logger\Controller\AlohaController::content'
+    requirements:
+        _permission: 'administer site configuration'
