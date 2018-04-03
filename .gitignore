@@ -13,6 +13,9 @@
 # Ignore Drupal's file directory
 /docroot/sites/*/files/
 
+# Ignore Monolog services file
+/docroot/sites/defaul/monolog.services.yml
+
 # Ignore SimpleTest multi-site environment.
 /docroot/sites/simpletest
 
