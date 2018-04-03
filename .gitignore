@@ -14,7 +14,7 @@
 /docroot/sites/*/files/
 
 # Ignore Monolog services file
-/docroot/sites/defaul/monolog.services.yml
+/docroot/sites/default/monolog.services.yml
 
 # Ignore SimpleTest multi-site environment.
 /docroot/sites/simpletest
